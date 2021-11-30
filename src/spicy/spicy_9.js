@@ -181,7 +181,7 @@ export const filter = (arr, test) => {
  */
 export const allEvensAreOdd = (arr) => {
     for (let i=0; i< arr.length; i+=2) {
-        if (test(arr[i]) % 2 === 0){
+        if (arr[i] % 2 === 0){
             continue;
         } else{
             return false;
@@ -198,7 +198,7 @@ export const allEvensAreOdd = (arr) => {
  */
 export const anEvenIsOdd = (arr) => {
     for (let i=0; i< arr.length; i+=2) {
-        if(test(arr[i]) % 2 === 1){
+        if(arr[i] % 2 === 1){
             return true
         } else{
             continue;
