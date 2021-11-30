@@ -1,0 +1,1 @@
+import { getMedian } from "./medium/medium_1";
