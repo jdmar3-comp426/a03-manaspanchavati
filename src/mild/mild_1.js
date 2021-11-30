@@ -57,5 +57,24 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
+    let visited = Array.from({length: n}, (_, i) => false);
 
+    for (let i=0; i < n; i++) {
+
+        if (visited[i] == true) {
+            continue;
+        }
+
+        let count = 1;
+        for (let j=i+1; j<n; j++) {
+            if (arr[i] = arr[j]) {
+                visited[j] = true;
+                count++;
+            }
+        }
+        if (i= n-1) {
+            document.write(arr[i] + ": " + count);
+        }
+        document.write(arr[i] + ": " + count + ", ");
+    }
 }
