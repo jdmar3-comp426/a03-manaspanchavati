@@ -62,23 +62,13 @@ export function getMedian(array) {
 export function getStatistics(array) {
     let length = array.length;
     let sum = getSum(array);
-    let total = 0;
-    for (let i=0; i < array.length; i++) {
-        total += array[i];
-    }
-    let mean = total / array.length;
+    let mean = sum/length;
     let median = getMedian(array);
     let min = Math.min(...array);
     let max = Math.max(...array);
 
-    // variance and std. dev.
-    let sumOfSquares;
-    for (let i = 0; i<array.length; i++) {
-        let diff = array[i] - mean;
-        sumOfSquares += diff;
-    }
-    let variance = sumOfSquares/(array.length - 1);
-    let std = Math.sqrt(variance);
+    var variance = variance(array, mean);
+    var std = Math.pow(variance);
 
     return {
         length: length,
