@@ -60,9 +60,9 @@ export function getMedian(array) {
  }
  */
 export function getStatistics(array) {
-    let min = Math.min(...array);
     let max = Math.max(...array);
-
+    let min = Math.min(...array);
+    
     return {
         length: array.length,
         sum: getSum(array),
