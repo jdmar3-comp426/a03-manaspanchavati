@@ -66,8 +66,15 @@ export function getStatistics(array) {
     let median = getMedian(array);
     let min = Math.min(...array);
     let max = Math.max(...array);
-    let variance = Math.variance(array);
-    let std = Math.std(array);
+
+    array = array.map((k) => {
+        return (k - mean) ** 2
+    })
+    let newSum = arr.reduce((a, b) => a+b, 0);
+
+    let variance = newSum / array.length;
+
+    let std = Math.sqrt(variance);
 
     return {
         length: length,
