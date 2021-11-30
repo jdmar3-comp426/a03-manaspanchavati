@@ -70,7 +70,7 @@ export function getStatistics(array) {
     array = array.map((k) => {
         return (k - mean) ** 2
     })
-    let newSum = arr.reduce((a, b) => a+b, 0);
+    let newSum = array.reduce((a, b) => a+b, 0);
 
     let variance = newSum / array.length;
 
