@@ -85,7 +85,7 @@ export function countArray(array) {
     }
     let finalLength = name.length;
     for (let i=0; i<finalLength; i++) {
-        final[i] = "" + name + ": " + counter + ", ";
+        final[i] = "" + name[i] + ": " + counter[i] + ", ";
     }
 
     return final;
