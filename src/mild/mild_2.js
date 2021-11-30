@@ -34,7 +34,7 @@ export function identifyArray(array) {
    
    for (let i=0; i<array.length; i++) {
       let type = typeof array[i];
-      arr[i] = "type: " + type +", value: " + array[i];
+      arr[i] = identifyVariable(array[i]);
    }
 
    return arr;
@@ -78,7 +78,9 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-
+   let newKey = JSON.parse(JSON.stringify(object));
+   removeKey(newkey, key);
+   return newKey;
 }
 
 /**
@@ -103,5 +105,10 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
+   let newKey = JSON.parse(JSON.stringify(object));
 
+   for (let i=0; i<keyList.length; i++) {
+      removeKey(newKey, keyList[i]);
+   }
+   return newKey;
 }
