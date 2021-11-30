@@ -58,6 +58,9 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
     let n = array.length;
+    let counter = [];
+    let name = [];
+    let final = [];
     let visited = Array.from({length: n}, (_, i) => false);
 
     for (let i=0; i < n; i++) {
@@ -65,6 +68,8 @@ export function countArray(array) {
         if (visited[i] == true) {
             continue;
         }
+        
+        name[i] = arr[i];
 
         let count = 1;
         for (let j=i+1; j<n; j++) {
@@ -73,9 +78,14 @@ export function countArray(array) {
                 count++;
             }
         }
-        if (i= n-1) {
-            document.write(arr[i] + ": " + count);
-        }
-        document.write(arr[i] + ": " + count + ", ");
+
+        counter[i] = count;
+
     }
+    let finalLength = name.length;
+    for (let i=0; i<finalLength; i++) {
+        final[i] = "" + name + ": " + counter + ", ";
+    }
+
+    return final;
 }
