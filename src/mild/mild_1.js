@@ -70,11 +70,11 @@ export function countArray(array) {
             continue;
         }
         
-        name[i] = arr[i];
+        name[i] = array[i];
 
         let count = 1;
         for (let j=i+1; j<n; j++) {
-            if (arr[i] = arr[j]) {
+            if (array[i] = array[j]) {
                 visited[j] = true;
                 count++;
             }
