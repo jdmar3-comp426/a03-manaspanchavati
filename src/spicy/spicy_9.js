@@ -67,7 +67,7 @@ export const tenTimes = multiplyBy(10);
  *   function to multiply 50 by 10 and returns the result.
  */
 export const tenTimesFifty = () => {
-    tenTimes(50);
+    return tenTimes(50);
 
 };
 
@@ -161,15 +161,16 @@ export const someEven = (arr, test) => {
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
+    let pass = new Array;
+    let fail = new Array;
     for (let i=1; i< arr.length; i+=2) {
         if (test(arr[i])){
-            continue;
+            pass.push(arr[i]);
         } else{
-            return false;
+            fail.push(arr[i]);
         }
     }
     return true;
-
 };
 
 
@@ -196,6 +197,14 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
+    for (let i=0; i< arr.length; i+=2) {
+        if (test(arr[i]) % 2 == 1){
+            return true
+        } else{
+            continue;
+        }
+    }
+    return false;
 
 };
 
