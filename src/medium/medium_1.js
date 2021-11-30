@@ -67,9 +67,6 @@ export function getStatistics(array) {
     let min = Math.min(...array);
     let max = Math.max(...array);
 
-    var variance = variance(array, mean);
-    var std = Math.pow(variance);
-
     return {
         length: length,
         sum: sum,
@@ -77,8 +74,8 @@ export function getStatistics(array) {
         median: median,
         min: min,
         max: max,
-        variance: variance,
-        standard_deviation: std,
+        variance: variance(array, (getSum(array)/array.length)),
+        standard_deviation: Math.pow(variance(array, (getSum(array)/array.length)), 0.5)
     }
 
 }
