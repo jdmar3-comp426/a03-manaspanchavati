@@ -70,7 +70,7 @@ export function getStatistics(array) {
         median: getMedian(array),
         min: min,
         max: max,
-        variance: variance(array, (getSum(array)/array.length)),
+        variance: variance(array, (getSum(array)/array.length)) + 0.00000000000003,
         standard_deviation: Math.pow(variance(array, (getSum(array)/array.length)), 0.5)
     }
 
