@@ -59,9 +59,9 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
     let n = array.length;
-    let counter = [];
-    let name = [];
-    let final = [];
+    let counter = new Array();
+    let name = new Array();
+    let final = new Array();
     let visited = Array.from({length: n}, (_, i) => false);
 
     for (let i=0; i < n; i++) {
