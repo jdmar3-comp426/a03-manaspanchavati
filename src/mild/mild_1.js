@@ -10,7 +10,7 @@
  */
 export function sumToString(a, b) {
     let c = a + b;
-    return c.toString();
+    return " " + a + " + " + b + " = " + c;
 }
 
 
