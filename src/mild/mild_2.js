@@ -30,7 +30,7 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-   let arr = [];
+   let arr = new Array();
    
    for (let i=0; i<array.length; i++) {
       let type = typeof array[i];
