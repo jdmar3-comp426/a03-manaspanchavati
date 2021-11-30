@@ -51,7 +51,7 @@ export const multiplyBy = (num1) => {
     function multiplyBy2(num2) {
         return num1*num2;
     }
-    return multiplyBy2(num2);
+    return multiplyBy2;
 };
 
 
