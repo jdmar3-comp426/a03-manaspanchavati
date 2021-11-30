@@ -28,7 +28,7 @@ export function getIncreasingArray(startNumber, endNumber) {
     let length = (endNumber - startNumber)
     let arr = [];
     arr[0] = startNumber
-    for (let i=1; i<length; i++) {
+    for (let i=1; i<=length; i++) {
         arr[i] = startNumber++;
     }
     return arr;
