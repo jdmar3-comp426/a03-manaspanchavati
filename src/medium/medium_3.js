@@ -81,5 +81,12 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
+    let filter = new Array;
+    car_data.forEach(function (car) {
+        if (car.year in years) {
+            filter.push(car);
+        }
+    })
 
+    return filter;
 }
