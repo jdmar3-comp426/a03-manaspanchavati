@@ -79,7 +79,7 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
    let newKey = JSON.parse(JSON.stringify(object));
-   removeKey(newkey, key);
+   removeKey(newKey, key);
    return newKey;
 }
 
