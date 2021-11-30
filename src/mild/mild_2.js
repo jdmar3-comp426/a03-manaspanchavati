@@ -34,7 +34,7 @@ export function identifyArray(array) {
    
    for (let i=0; i<array.length; i++) {
       let type = typeof array[i];
-      arr[i] = "type: " + type +", value: " + variable;
+      arr[i] = "type: " + type +", value: " + array[i];
    }
 
    return arr;
