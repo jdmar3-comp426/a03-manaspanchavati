@@ -26,8 +26,6 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
     })
 
     return filter;
-    //let filter = car_data.filter(car => (car.horsepower >= minHorsepower) && (car.torque >= minTorque));
-    //filter = filter.sort((a, b))
 }
 
 
@@ -42,6 +40,14 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
  *
  */
 export function searchMpg(car_data, minCity, minHighway) {
+    let filter = new Array;
+    car_data.forEach(function (car) {
+        if (car.highway_mpg >= minHighway && car.city_mpg >= minCity) {
+            filter.push(car);
+        }
+    })
+
+    return filter;
 
 }
 
