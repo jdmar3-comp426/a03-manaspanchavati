@@ -18,7 +18,14 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
+    let filter = new Array;
+    car_data.forEach(function (car) {
+        if (car.horsepower >= minHorsepower && car.torque >= minTorque) {
+            filter.push(car);
+        }
+    })
 
+    return filter;
 }
 
 
@@ -33,6 +40,14 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
  *
  */
 export function searchMpg(car_data, minCity, minHighway) {
+    let filter = new Array;
+    car_data.forEach(function (car) {
+        if (car.highway_mpg >= minHighway && car.city_mpg >= minCity) {
+            filter.push(car);
+        }
+    })
+
+    return filter;
 
 }
 
@@ -46,7 +61,14 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
+    let filter = new Array;
+    car_data.forEach(function (car) {
+        if (car.id.toLowerCase().includes(searchTerm.toLowerCase())) {
+            filter.push(car);
+        }
+    })
 
+    return filter;
 }
 
 
@@ -59,5 +81,12 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
+    let filter = new Array;
+    car_data.forEach(function (car) {
+        if (car.year in years) {
+            filter.push(car);
+        }
+    })
 
+    return filter;
 }
